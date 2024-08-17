@@ -38,3 +38,22 @@ console.log(typeof heros);
 // array -> object
 // object -> object
 // function -> function  (here object function)
+
+
+/******************Memory******************* */
+// Stack (Primitive): call-by-value, Heap(Non-Primitive): call-by-reference
+let mySocial = "devjyotshna"
+let anotherName = mySocial
+anotherName = "codeaurchai"
+console.log(mySocial);
+console.log(anotherName);
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@phonepea"
+}
+let userTwo = userOne
+userTwo.email = "userTwo@yahoo.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
