@@ -49,4 +49,4 @@ const addTwo = (num1, num2) => ({username : "Remora"})  // object is also return
 console.log(addTwo(3, 4));
 
 const myArray = [2, 3, 5, 6, 7, 8]
-myArray.forEach(() => ())
+// myArray.forEach(() => ())
