@@ -70,3 +70,68 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+## project 3 : Digital Clock
+
+```javascript
+const clock = document.getElementById('clock')
+// const clock = document.querySelector('#clock')
+
+
+setInterval(function(){
+  let date = new Date()
+  // console.log(date.toLocaleTimeString())
+  clock.innerText = date.toLocaleTimeString()
+}, 1000)
+```
+## project 4 : Guess Number
+
+```javascript
+const random = parseInt(Math.random() * 100 + 1);
+
+const submit = document.querySelector('#subt')
+const userInput = document.querySelector('#guessField')
+const remaining = document.querySelector('.lastResult')
+const lowOrHi = document.querySelector('.lowOrHi')
+const startOver = document.querySelector('.resultParas')
+
+const p = document.createElement('p')
+
+let prevGuess = []
+let numGues = 1
+
+let playGame = true
+if(playGame){
+  submit.addEventListener('click', function (e) {
+    e.preventDefault()
+    const guess = parseInt(userInput.value)
+    console.log(guess);
+    validateGuess(guess)
+  })
+}
+
+function validateGuess(guess){
+  if(isNaN(guess)){
+    alert('Please enter a valid number')
+  }
+}
+
+function checkGuess(guess){
+  //
+}
+function guessDisplay(guess){
+
+}
+
+function displayMessage(msg){
+  // DOM interaction
+}
+
+function endGame() {
+  
+}
+
+function newGame() {
+
+}
+
+```
