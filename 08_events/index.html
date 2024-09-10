@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div>
+        <ul>
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=300" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/86596/owl-bird-eyes-eagle-owl-86596.jpeg?auto=compress&cs=tinysrgb&w=300" alt=""></li>
+            <li><img width="200px" id="prayer"src="https://images.pexels.com/photos/27403382/pexels-photo-27403382/free-photo-of-ganga-aarti.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")
+    // }
+    //attachEvent()
+    //jQuery - on
+
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log(e)
+    }, false)
+    
+</script>
+</html>
