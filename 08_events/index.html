@@ -8,7 +8,7 @@
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
     <div>
-        <ul>
+        <ul id="images">
             <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg" alt="photoshop"></li>
             <li><img width="200px" id="japan" src="https://images.pexels.com/photos/1440476/pexels-photo-1440476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
             <li><img width="200px" id="river" src="https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&w=300" alt=""></li>
@@ -25,9 +25,40 @@
     //attachEvent()
     //jQuery - on
 
-    document.getElementById('owl').addEventListener('click', function(e){
-        console.log(e)
-    }, false)
+    // // type, timestamp, defaultPrevented
+    // // target, toElement, srcElement, currentTarget,
+    // //clientX, clientY, screenX, screenY
+    // // altKey, crtlKey, shiftKey, keyCode
     
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("click inside the ul")
+    // }, false)    
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("owl clicked")
+    //     e.stopPropagation()
+    // }, false)    
+    // //Event Propagation -> 
+    // //event bubbling(bubbling up -> inside event then outside event) -> false or default, 
+    // //event capturing(capturing mode -> outside event then inside event) -> true
+    
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google clicked");      
+    // }, false)
+
+    // TODO : remove the images when clicked
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode
+            removeIt.remove() //new code
+        }
+
+        
+        // removeIt.parentNode.removeChild(removeIt) //old code 
+    }, false)
 </script>
 </html>
