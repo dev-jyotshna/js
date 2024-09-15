@@ -179,7 +179,7 @@ function newGame() {
 
 
 ```
-## project 5
+## project 5 : Keyboard
 ```javascript
 const insert = document.getElementById('insert');
 window.addEventListener('keydown', (e) => {
