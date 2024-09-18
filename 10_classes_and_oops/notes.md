@@ -21,3 +21,16 @@ Abstraction
 Encapsulation
 Inheritance
 Polymorphism
+
+
+## Prototypal Behavior
+- doesn't rest until finds everything about the code
+- prototypal inheritance
+- 
+            function
+            ^
+            |
+Array <- Object <- null
+            |    
+            V
+            String
