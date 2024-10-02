@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width", initial-scale=1.0">
+  <title>Closure</title>
+</head>
+<body style="background-color: #313131">
+  <button id="orange">Orange</button>
+  <button id="green">Green</button>
+</body>
+<script>
+// Lexical scoping -> Outer(username fn inner(username)) 
+// inner fn can access variables of outer function but vice versa is not true
+// sibling inner fn can't share their personal variables but both sibling fns will have access to their parent fn's variable
+  
+  // function init() {
+  //   let name = "Mozilla"; 
+  //   function displayName() {
+  //     console.log(name); 
+  //   }
+  //   displayName();
+  // }
+  // init();
+
+  // function outer(){
+  //   let username = "Ellie"
+  //   function inner(){
+  //     console.log("inner", username);
+  //   }
+  //   inner()
+  // }
+  // outer()
+  // console.log("Too outer", username);
+
+//Closure : stores/returns the lexical scope of inner fn (meaning it is returning outer fn , and out fn's variables along with itself)
+  // function makeFunc() {
+  //   const name = "Mozilla";
+  //   function displayName() {
+  //     console.log(name);
+  //   }
+  //   return displayName;
+  // }
+  
+  // const myFunc = makeFunc();
+  // myFunc();
+
+</script>
+<script>
+  document.getElementById("orange").addEventListerner('click', function(){
+    document.body.style.backgroundColor = 'orange';
+  })
+  document.getElementById("green").addEventListerner('click', function(){
+    document.body.style.backgroundColor = 'green';
+  })
+
+  function clickHandler(color){
+    // document.body.style.backgroundColor = `${color)`
+    return function(){ // returns the whole lexical scope
+      document.body.style.backgroundColor = `${color)`
+    }
+  }
+
+  document.getElementById("orange").addEventListerner('click', clickHandler("orange"))
+  document.getElementById("green").addEventListerner('click', clickHandler("green"))
+</script>
+</html>
