@@ -36,4 +36,4 @@ Note: DOM & CSSOM are made simultaneously & independently , for now they don't h
 - what happens if our CSSOM is not yet ready and we encounters js tag?
   - JS execution will be halted until CSSOm is ready. (this is changing)
 - JS > DOM and CSSOM > JS
-- defer the JS
+- deferring the JS (Ajax)
